@@ -1625,6 +1625,7 @@ body::after{
             <button
                 class="menuLink"
                 id="menuHome">
+                  <div class="card" id="videosCard">
 
                 🏠 الرئيسية
 
@@ -1937,6 +1938,9 @@ menuOverlay.addEventListener(
     }
 );
 
+      document.getElementById("menuVideos").addEventListener("click", () => {
+    window.location.href = "videos.html";
+});
 
 /* ================= MENU LINKS ================= */
 
@@ -2011,6 +2015,10 @@ loadUser();
 
 setProgress(0);
 
+      document.getElementById("videosCard").addEventListener("click", () => {
+    window.location.href = "videos.html";
+});
+      
 </script>
 
 </body>
