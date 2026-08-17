@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>𝑨𝒍𝒌𝒉𝒐𝒓𝒊𝒛𝒎𝒊 | محتوى الطالب</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    color:#fff;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #343842 0%,
+            #1c1e23 35%,
+            #0c0e12 72%,
+            #07080a 100%
+        );
+
+    overflow-x:hidden;
+}
+
+.page{
+
+    min-height:100vh;
+
+    padding:
+        20px
+        17px
+        110px;
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:25px;
+
+    animation:
+        headerIn
+        .7s
+        ease
+        both;
+}
+
+.back{
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.back:active{
+    transform:scale(.9);
+}
+
+.logo{
+
+    text-align:center;
+
+    direction:ltr;
+
+    font-family:Georgia,serif;
+
+    font-style:italic;
+
+    font-size:21px;
+}
+
+.logo-sub{
+
+    text-align:center;
+
+    color:#70737b;
+
+    font-size:7px;
+
+    letter-spacing:2px;
+
+    margin-top:3px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    position:relative;
+
+    padding:
+        27px
+        20px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.35);
+
+    animation:
+        heroIn
+        .8s
+        .1s
+        ease
+        both;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+    height:240px;
+
+    left:-110px;
+    top:-110px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(111,125,255,.22),
+            transparent 70%
+        );
+
+    filter:blur(20px);
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+}
+
+.small-title{
+
+    color:#858992;
+
+    font-size:10px;
+
+    margin-bottom:8px;
+}
+
+.student-name{
+
+    font-size:29px;
+
+    font-weight:800;
+
+    letter-spacing:-1px;
+
+    line-height:1.35;
+}
+
+.student-stage{
+
+    display:inline-block;
+
+    margin-top:9px;
+
+    padding:
+        6px
+        10px;
+
+    border-radius:10px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    color:#aaaeb7;
+
+    font-size:9px;
+}
+
+.hero-text{
+
+    margin-top:13px;
+
+    color:#9a9da5;
+
+    font-size:11px;
+
+    line-height:1.9;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-box{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    background:
+        rgba(0,0,0,.18);
+
+    border:
+        1px solid
+        rgba(255,255,255,.06);
+}
+
+.progress-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:10px;
+}
+
+.progress-percent{
+
+    color:#fff;
+
+    font-weight:700;
+}
+
+.progress-bar{
+
+    height:6px;
+
+    margin-top:10px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    overflow:hidden;
+}
+
+.progress-fill{
+
+    width:18%;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #686fca,
+            #a7acd9
+        );
+
+    transition:
+        width .8s ease;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+
+    margin-top:28px;
+
+    animation:
+        fadeUp
+        .7s
+        .3s
+        ease
+        both;
+}
+
+.section-head{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:13px;
+}
+
+.section-title{
+
+    font-size:17px;
+
+    font-weight:700;
+}
+
+.section-more{
+
+    color:#70737b;
+
+    font-size:9px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box{
+
+    position:relative;
+
+    margin-bottom:14px;
+}
+
+.search-box input{
+
+    width:100%;
+
+    height:46px;
+
+    border-radius:15px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    outline:none;
+
+    background:
+        rgba(255,255,255,.045);
+
+    color:#fff;
+
+    padding:
+        0 43px
+        0 14px;
+
+    font-family:inherit;
+
+    font-size:11px;
+}
+
+.search-box input::placeholder{
+    color:#666a72;
+}
+
+.search-icon{
+
+    position:absolute;
+
+    right:14px;
+
+    top:50%;
+
+    transform:
+        translateY(-50%);
+
+    color:#777b84;
+
+    font-size:16px;
+}
+
+
+/* =========================
+   VIDEOS
+========================= */
+
+.video-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:11px;
+}
+
+.video{
+
+    min-height:185px;
+
+    padding:12px;
+
+    border-radius:22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:.25s;
+}
+
+.video:active{
+    transform:scale(.96);
+}
+
+.video-thumb{
+
+    position:relative;
+
+    height:94px;
+
+    border-radius:17px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #464b57,
+            #17191e 70%
+        );
+
+    overflow:hidden;
+
+    margin-bottom:13px;
+}
+
+.play{
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.12);
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    font-size:17px;
+}
+
+.video-number{
+
+    position:absolute;
+
+    top:9px;
+    right:9px;
+
+    padding:
+        4px
+        7px;
+
+    border-radius:8px;
+
+    background:
+        rgba(0,0,0,.35);
+
+    color:#aaa;
+
+    font-size:7px;
+}
+
+.video-title{
+
+    font-size:11px;
+
+    font-weight:700;
+
+    line-height:1.6;
+}
+
+.video-description{
+
+    color:#777a82;
+
+    font-size:8px;
+
+    line-height:1.6;
+
+    margin-top:4px;
+}
+
+.video-time{
+
+    color:#666a72;
+
+    font-size:8px;
+
+    margin-top:7px;
+}
+
+
+/* =========================
+   EXAMS
+========================= */
+
+.exam{
+
+    padding:17px;
+
+    border-radius:22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    display:flex;
+
+    align-items:center;
+
+    gap:13px;
+
+    margin-bottom:10px;
+}
+
+.exam-icon{
+
+    width:48px;
+    height:48px;
+
+    flex-shrink:0;
+
+    border-radius:16px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:21px;
+}
+
+.exam-info{
+    flex:1;
+}
+
+.exam-title{
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.exam-sub{
+
+    margin-top:5px;
+
+    color:#70737b;
+
+    font-size:8px;
+}
+
+.exam-button{
+
+    border:0;
+
+    padding:
+        9px
+        12px;
+
+    border-radius:11px;
+
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.08);
+
+    font-family:inherit;
+
+    font-size:8px;
+
+    cursor:pointer;
+}
+
+
+/* =========================
+   DEVELOPER
+========================= */
+
+.developer{
+
+    margin-top:28px;
+
+    padding:20px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.02)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    text-align:center;
+}
+
+.developer-label{
+
+    color:#73767e;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+    direction:ltr;
+
+    margin-bottom:7px;
+}
+
+.developer-title{
+
+    font-size:15px;
+
+    font-weight:700;
+}
+
+.developer-text{
+
+    color:#70737b;
+
+    font-size:9px;
+
+    line-height:1.7;
+
+    margin-top:6px;
+
+    margin-bottom:14px;
+}
+
+.developer-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:7px;
+
+    min-width:145px;
+
+    height:40px;
+
+    padding:0 16px;
+
+    border-radius:13px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    background:
+        rgba(255,255,255,.07);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    font-weight:600;
+}
+
+
+/* =========================
+   BOTTOM NAV
+========================= */
+
+.bottom{
+
+    position:fixed;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    z-index:50;
+
+    padding:
+        10px
+        15px
+        calc(
+            10px +
+            env(safe-area-inset-bottom)
+        );
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(7,8,10,.98),
+            rgba(7,8,10,.82),
+            transparent
+        );
+
+    backdrop-filter:blur(12px);
+}
+
+.nav{
+
+    max-width:600px;
+
+    height:58px;
+
+    margin:auto;
+
+    border-radius:22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        rgba(255,255,255,.055);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-around;
+}
+
+.nav-button{
+
+    width:48px;
+    height:48px;
+
+    border:0;
+
+    border-radius:17px;
+
+    background:transparent;
+
+    color:#6d7078;
+
+    font-size:19px;
+
+    cursor:pointer;
+}
+
+.nav-button.active{
+
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.09);
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:92px;
+
+    transform:
+        translateX(-50%)
+        translateY(20px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    z-index:100;
+
+    min-width:220px;
+
+    max-width:85vw;
+
+    padding:
+        12px
+        16px;
+
+    border-radius:15px;
+
+    background:
+        rgba(25,25,28,.96);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    text-align:center;
+
+    color:#ddd;
+
+    font-size:10px;
+
+    transition:.3s;
+}
+
+.toast.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes headerIn{
+
+    from{
+        opacity:0;
+        transform:translateY(-18px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes heroIn{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(25px)
+            scale(.97);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(22px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:390px){
+
+    .student-name{
+        font-size:26px;
+    }
+
+    .video-thumb{
+        height:82px;
+    }
+
+}
+
+@media(max-width:350px){
+
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+    .video-thumb{
+        height:115px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <button
+            class="back"
+            onclick="goBack()">
+
+            →
+
+        </button>
+
+
+        <div>
+
+            <div class="logo">
+                𝑨𝒍𝒌𝒉𝒐𝒓𝒊𝒛𝒎𝒊
+            </div>
+
+            <div class="logo-sub">
+                MATHEMATICS PLATFORM
+            </div>
+
+        </div>
+
+
+        <div style="width:44px"></div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                أهلاً بيك في معركتك الجديدة ⚔️
+            </div>
+
+
+            <div
+                id="studentName"
+                class="student-name">
+
+                جاري تحميل اسم الطالب...
+
+            </div>
+
+
+            <div
+                id="studentStage"
+                class="student-stage">
+
+                جاري تحميل المرحلة...
+
+            </div>
+
+
+            <p class="hero-text">
+
+                هنا هتلاقي شرح الدروس
+                والفيديوهات والاختبارات.
+                شاهد الشرح، ركّز، وبعدها
+                اختبر نفسك وشوف مستواك.
+
+            </p>
+
+
+            <div class="progress-box">
+
+                <div class="progress-top">
+
+                    <span>
+                        تقدمك في المعركة
+                    </span>
+
+                    <span
+                        id="progressPercent"
+                        class="progress-percent">
+
+                        18%
+
+                    </span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressFill"
+                        class="progress-fill">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIDEOS -->
+
+    <section
+        class="section"
+        id="videosSection">
+
+        <div class="section-head">
+
+            <div class="section-title">
+                الفيديوهات 🎬
+            </div>
+
+            <div class="section-more">
+                شرح ودروس
+            </div>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <span class="search-icon">
+                🔎
+            </span>
+
+            <input
+                type="search"
+                id="videoSearch"
+                placeholder="ابحث عن فيديو..."
+                autocomplete="off">
+
+        </div>
+
+
+        <div
+            class="video-grid"
+            id="videoGrid">
+
+
+            <div
+                class="video"
+                data-title="مقدمة الدرس الأول"
+                onclick="openVideo('مقدمة الدرس الأول')">
+
+                <div class="video-thumb">
+
+                    <span class="video-number">
+                        01
+                    </span>
+
+                    <span class="play">
+                        ▶
+                    </span>
+
+                </div>
+
+                <div class="video-title">
+                    مقدمة الدرس الأول
+                </div>
+
+                <div class="video-description">
+                    بداية الدرس وشرح أهم الأفكار.
+                </div>
+
+                <div class="video-time">
+                    ⏱ 18 دقيقة
+                </div>
+
+            </div>
+
+
+            <div
+                class="video"
+                data-title="شرح أهم المسائل"
+                onclick="openVideo('شرح أهم المسائل')">
+
+                <div class="video-thumb">
+
+                    <span class="video-number">
+                        02
+                    </span>
+
+                    <span class="play">
+                        ▶
+                    </span>
+
+                </div>
+
+                <div class="video-title">
+                    شرح أهم المسائل
+                </div>
+
+                <div class="video-description">
+                    حل المسائل بطريقة سهلة ومنظمة.
+                </div>
+
+                <div class="video-time">
+                    ⏱ 24 دقيقة
+                </div>
+
+            </div>
+
+
+            <div
+                class="video"
+                data-title="تدريب على الأفكار"
+                onclick="openVideo('تدريب على الأفكار')">
+
+                <div class="video-thumb">
+
+                    <span class="video-number">
+                        03
+                    </span>
+
+                    <span class="play">
+                        ▶
+                    </span>
+
+                </div>
+
+                <div class="video-title">
+                    تدريب على الأفكار
+                </div>
+
+                <div class="video-description">
+                    تدريبات تساعدك تفهم وتحل بنفسك.
+                </div>
+
+                <div class="video-time">
+                    ⏱ 16 دقيقة
+                </div>
+
+            </div>
+
+
+            <div
+                class="video"
+                data-title="مراجعة سريعة"
+                onclick="openVideo('مراجعة سريعة')">
+
+                <div class="video-thumb">
+
+                    <span class="video-number">
+                        04
+                    </span>
+
+                    <span class="play">
+                        ▶
+                    </span>
+
+                </div>
+
+                <div class="video-title">
+                    مراجعة سريعة
+                </div>
+
+                <div class="video-description">
+                    مراجعة لأهم النقاط قبل الاختبار.
+                </div>
+
+                <div class="video-time">
+                    ⏱ 12 دقيقة
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- EXAMS -->
+
+    <section
+        class="section"
+        id="examsSection">
+
+        <div class="section-head">
+
+            <div class="section-title">
+                الاختبارات 📝
+            </div>
+
+            <div class="section-more">
+                اختبر نفسك
+            </div>
+
+        </div>
+
+
+        <div class="exam">
+
+            <div class="exam-icon">
+                📝
+            </div>
+
+            <div class="exam-info">
+
+                <div class="exam-title">
+                    اختبار الوحدة الأولى
+                </div>
+
+                <div class="exam-sub">
+                    20 سؤال • مستوى متوسط
+                </div>
+
+            </div>
+
+            <button
+                class="exam-button"
+                onclick="startExam('اختبار الوحدة الأولى')">
+
+                ابدأ
+
+            </button>
+
+        </div>
+
+
+        <div class="exam">
+
+            <div class="exam-icon">
+                🧠
+            </div>
+
+            <div class="exam-info">
+
+                <div class="exam-title">
+                    اختبار المراجعة
+                </div>
+
+                <div class="exam-sub">
+                    15 سؤال • مراجعة شاملة
+                </div>
+
+            </div>
+
+            <button
+                class="exam-button"
+                onclick="startExam('اختبار المراجعة')">
+
+                ابدأ
+
+            </button>
+
+        </div>
+
+
+        <div class="exam">
+
+            <div class="exam-icon">
+                🏆
+            </div>
+
+            <div class="exam-info">
+
+                <div class="exam-title">
+                    تحدي المعركة
+                </div>
+
+                <div class="exam-sub">
+                    30 سؤال • مستوى متقدم
+                </div>
+
+            </div>
+
+            <button
+                class="exam-button"
+                onclick="startExam('تحدي المعركة')">
+
+                ابدأ
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DEVELOPER -->
+
+    <section class="developer">
+
+        <div class="developer-label">
+            DEVELOPER
+        </div>
+
+        <div class="developer-title">
+            المطور 👨‍💻
+        </div>
+
+        <div class="developer-text">
+            عندك مشكلة أو اقتراح؟
+            تواصل مع المطور مباشرة.
+        </div>
+
+
+        <a
+            class="developer-button"
+            href="https://instagram.com/xyi_1q"
+            target="_blank"
+            rel="noopener">
+
+            📸 تواصل مع المطور
+
+        </a>
+
+    </section>
+
+
+</div>
+
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom">
+
+    <nav class="nav">
+
+        <button
+            class="nav-button"
+            onclick="goHome()">
+
+            ⌂
+
+        </button>
+
+
+        <button
+            class="nav-button active"
+            onclick="scrollToVideos()">
+
+            ▶
+
+        </button>
+
+
+        <button
+            class="nav-button"
+            onclick="scrollToExams()">
+
+            📝
+
+        </button>
+
+
+        <button
+            class="nav-button"
+            onclick="contactDeveloper()">
+
+            👨‍💻
+
+        </button>
+
+    </nav>
+
+</div>
+
+
+<div
+    class="toast"
+    id="toast">
+
+    جاري فتح الصفحة...
+
+</div>
+
+
+<script>
+
+/* ==================================================
+   بيانات الطالب
+   ================================================== */
+
+/*
+   الشكل المتوقع للبيانات:
+
+   localStorage.setItem("studentData", JSON.stringify({
+       fullName: "أحمد محمد",
+       studyStage: "ثالثة ثانوي"
+   }));
+
+   أو لو كانت أسماء المفاتيح القديمة موجودة:
+   fullName
+   studyStage
+*/
+
+function getStudentData(){
+
+    let student = null;
+
+
+    /* الطريقة الأساسية */
+
+    try{
+
+        const saved =
+            localStorage.getItem(
+                "studentData"
+            );
+
+        if(saved){
+
+            student =
+                JSON.parse(saved);
+
+        }
+
+    }catch(error){
+
+        console.error(
+            "Student data error:",
+            error
+        );
+
+    }
+
+
+    /* لو البيانات متخزنة بشكل منفصل */
+
+    if(!student){
+
+        const fullName =
+            localStorage.getItem(
+                "fullName"
+            );
+
+        const studyStage =
+            localStorage.getItem(
+                "studyStage"
+            );
+
+
+        if(
+            fullName ||
+            studyStage
+        ){
+
+            student = {
+
+                fullName:
+                    fullName || "",
+
+                studyStage:
+                    studyStage || ""
+
+            };
+
+        }
+
+    }
+
+
+    return student;
+
+}
+
+
+/* ==================================================
+   عرض بيانات الطالب
+   ================================================== */
+
+function loadStudent(){
+
+    const student =
+        getStudentData();
+
+
+    const nameElement =
+        document.getElementById(
+            "studentName"
+        );
+
+    const stageElement =
+        document.getElementById(
+            "studentStage"
+        );
+
+
+    if(
+        !student ||
+        !student.fullName
+    ){
+
+        nameElement.textContent =
+            "أهلاً بيك 👋";
+
+    }else{
+
+        nameElement.textContent =
+            student.fullName;
+
+    }
+
+
+    if(
+        !student ||
+        !student.studyStage
+    ){
+
+        stageElement.textContent =
+            "المرحلة الدراسية غير محددة";
+
+    }else{
+
+        stageElement.textContent =
+            student.studyStage;
+
+    }
+
+}
+
+
+/* تشغيل تحميل بيانات الطالب */
+
+loadStudent();
+
+
+/* ==================================================
+   رجوع
+   ================================================== */
+
+function goBack(){
+
+    window.history.back();
+
+}
+
+
+/* ==================================================
+   الرئيسية
+   ================================================== */
+
+function goHome(){
+
+    window.location.href =
+        "home.html";
+
+}
+
+
+/* ==================================================
+   الفيديو
+   ================================================== */
+
+function openVideo(video){
+
+    localStorage.setItem(
+        "selectedVideo",
+        video
+    );
+
+
+    showToast(
+        "🎬 جاري فتح: " + video
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "video.html";
+
+    },600);
+
+}
+
+
+/* ==================================================
+   الاختبار
+   ================================================== */
+
+function startExam(exam){
+
+    localStorage.setItem(
+        "selectedExam",
+        exam
+    );
+
+
+    showToast(
+        "📝 جاري فتح " + exam
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "exams.html";
+
+    },600);
+
+}
+
+
+/* ==================================================
+   البحث
+   ================================================== */
+
+const videoSearch =
+    document.getElementById(
+        "videoSearch"
+    );
+
+
+const videos =
+    document.querySelectorAll(
+        ".video"
+    );
+
+
+videoSearch.addEventListener(
+    "input",
+    function(){
+
+        const value =
+            this.value
+            .trim()
+            .toLowerCase();
+
+
+        videos.forEach(
+            video => {
+
+                const title =
+                    video.dataset
+                    .title
+                    .toLowerCase();
+
+
+                if(
+                    title.includes(value)
+                ){
+
+                    video.style.display =
+                        "";
+
+                }else{
+
+                    video.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+/* ==================================================
+   التنقل
+   ================================================== */
+
+function scrollToVideos(){
+
+    document
+        .getElementById(
+            "videosSection"
+        )
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+function scrollToExams(){
+
+    document
+        .getElementById(
+            "examsSection"
+        )
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* ==================================================
+   المطور
+   ================================================== */
+
+function contactDeveloper(){
+
+    window.open(
+        "https://instagram.com/xyi_1q",
+        "_blank"
+    );
+
+}
+
+
+/* ==================================================
+   Toast
+   ================================================== */
+
+let toastTimer;
+
+
+function showToast(message){
+
+    const toast =
+        document.getElementById(
+            "toast"
+        );
+
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        toastTimer
+    );
+
+
+    toastTimer =
+        setTimeout(
+            () => {
+
+                toast.classList.remove(
+                    "show"
+                );
+
+            },
+            2200
+        );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

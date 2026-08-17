@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width,
+      initial-scale=1.0,
+      maximum-scale=1.0,
+      user-scalable=no">
+
+<title>𝑨𝒍𝑲𝒉𝒘𝒂𝒓𝒊𝒛𝒎𝒊 | الرئيسية</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    color:#fff;
+    background:#080808;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(100,100,100,.24),
+            rgba(20,20,20,.16) 35%,
+            rgba(5,5,5,.96) 78%
+        );
+
+    z-index:-10;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    opacity:.035;
+
+    background-image:
+        radial-gradient(
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        );
+
+    background-size:58px 58px;
+    pointer-events:none;
+    z-index:-9;
+}
+
+.page{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+    min-height:100vh;
+    padding:18px 18px 70px;
+}
+
+
+/* ================= HEADER ================= */
+
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.brandIcon{
+    width:46px;
+    height:46px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #414141,
+            #080808
+        );
+
+    border:1px solid #555;
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,.08),
+        inset 0 1px rgba(255,255,255,.12);
+
+    font-family:monospace;
+    font-weight:bold;
+    font-size:16px;
+    direction:ltr;
+}
+
+.brandText{
+    line-height:1.2;
+}
+
+.brandText strong{
+    display:block;
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:20px;
+    letter-spacing:1px;
+}
+
+.brandText small{
+    color:#666;
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.menuButton{
+    width:44px;
+    height:44px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.045);
+
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.menuButton:active{
+    transform:scale(.92);
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+
+    padding:28px 22px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(48,48,48,.82),
+            rgba(8,8,8,.97)
+        );
+
+    border:1px solid rgba(255,255,255,.14);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.55),
+        inset 0 1px rgba(255,255,255,.07);
+
+    margin-bottom:20px;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    left:-90px;
+    top:-100px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.12),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+.heroContent{
+    position:relative;
+    z-index:2;
+}
+
+.hello{
+    color:#777;
+    font-size:12px;
+    margin-bottom:7px;
+}
+
+.hero h1{
+    font-size:27px;
+    line-height:1.4;
+    margin-bottom:8px;
+}
+
+.hero h1 span{
+    color:#bbb;
+}
+
+.heroText{
+    color:#777;
+    font-size:11px;
+    line-height:1.8;
+    max-width:600px;
+}
+
+.stageBadge{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+
+    margin-top:17px;
+    padding:9px 14px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#ddd;
+    font-size:11px;
+}
+
+.stageDot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#ddd;
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,.6);
+}
+
+
+/* ================= SECTION ================= */
+
+.sectionHead{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin:25px 3px 12px;
+}
+
+.sectionHead h2{
+    font-size:18px;
+}
+
+.sectionHead span{
+    color:#555;
+    font-size:10px;
+}
+
+
+/* ================= CARDS ================= */
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:12px;
+}
+
+.card{
+    position:relative;
+
+    min-height:145px;
+    padding:19px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(35,35,35,.95),
+            rgba(7,7,7,.98)
+        );
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35),
+        inset 0 1px rgba(255,255,255,.05);
+
+    cursor:pointer;
+
+    transition:
+        transform .25s,
+        border-color .25s;
+}
+
+.card:active{
+    transform:scale(.97);
+}
+
+.cardIcon{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.09);
+
+    font-size:19px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-size:15px;
+    margin-bottom:7px;
+}
+
+.card p{
+    color:#666;
+    font-size:10px;
+    line-height:1.7;
+}
+
+.cardArrow{
+    position:absolute;
+    left:15px;
+    bottom:15px;
+    color:#777;
+    font-size:14px;
+}
+
+
+/* ================= FEATURED ================= */
+
+.featured{
+    padding:22px;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.025)
+        );
+
+    border:1px solid rgba(255,255,255,.13);
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.45);
+}
+
+.featuredTop{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    margin-bottom:15px;
+}
+
+.featuredIcon{
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:#111;
+    border:1px solid rgba(255,255,255,.14);
+
+    font-size:21px;
+}
+
+.featured h3{
+    font-size:17px;
+}
+
+.featured small{
+    color:#666;
+    font-size:9px;
+}
+
+.featured p{
+    color:#777;
+    font-size:11px;
+    line-height:1.9;
+}
+
+.progressBox{
+    margin-top:18px;
+}
+
+.progressInfo{
+    display:flex;
+    justify-content:space-between;
+
+    color:#777;
+    font-size:9px;
+    margin-bottom:8px;
+}
+
+.progress{
+    width:100%;
+    height:6px;
+
+    overflow:hidden;
+    border-radius:20px;
+
+    background:#111;
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.progress span{
+    display:block;
+
+    width:0%;
+    height:100%;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #555,
+            #eee
+        );
+
+    transition:width 1s ease;
+}
+
+
+/* ================= TEACHER ================= */
+
+.peopleSection{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.personCard{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    gap:17px;
+
+    padding:20px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(38,38,38,.95),
+            rgba(7,7,7,.98)
+        );
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.4),
+        inset 0 1px rgba(255,255,255,.05);
+
+    overflow:hidden;
+}
+
+.personCard::before{
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    left:-70px;
+    top:-70px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.09),
+            transparent 70%
+        );
+}
+
+.personImage{
+    position:relative;
+    z-index:1;
+
+    flex-shrink:0;
+
+    width:92px;
+    height:92px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    background:#111;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.5);
+}
+
+.personInfo{
+    position:relative;
+    z-index:1;
+}
+
+.personRole{
+    color:#777;
+    font-size:9px;
+    margin-bottom:5px;
+}
+
+.personInfo h3{
+    font-size:18px;
+    margin-bottom:7px;
+}
+
+.personInfo p{
+    color:#777;
+
+    font-size:10px;
+    line-height:1.9;
+}
+
+.teacherCard{
+    border-color:rgba(255,255,255,.16);
+}
+
+.developerCard{
+    margin-top:2px;
+}
+
+.personBadge{
+    display:inline-flex;
+
+    margin-top:10px;
+
+    padding:6px 10px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.09);
+
+    color:#aaa;
+
+    font-size:9px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer{
+    text-align:center;
+
+    color:#444;
+
+    font-size:9px;
+
+    line-height:1.8;
+
+    padding-top:28px;
+}
+
+.footer strong{
+    color:#777;
+}
+
+
+/* ================= MENU ================= */
+
+.menuOverlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:100;
+}
+
+.menuOverlay.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.menuPanel{
+    position:absolute;
+
+    top:0;
+    right:0;
+
+    width:min(320px,88vw);
+    height:100%;
+
+    padding:25px 18px;
+
+    background:
+        linear-gradient(
+            160deg,
+            #242424,
+            #070707
+        );
+
+    border-left:1px solid rgba(255,255,255,.12);
+
+    transform:translateX(100%);
+
+    transition:
+        transform .45s
+        cubic-bezier(.16,.8,.2,1);
+}
+
+.menuOverlay.show .menuPanel{
+    transform:translateX(0);
+}
+
+.menuTop{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    margin-bottom:30px;
+}
+
+.menuTop h2{
+    font-size:20px;
+}
+
+.closeMenu{
+    width:40px;
+    height:40px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:rgba(255,255,255,.05);
+
+    color:#fff;
+
+    font-size:18px;
+}
+
+.menuLinks{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.menuLink{
+    width:100%;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.035);
+
+    color:#ddd;
+
+    text-align:right;
+
+    font-family:inherit;
+    font-size:12px;
+
+    cursor:pointer;
+}
+
+
+/* ================= TOAST ================= */
+
+.toast{
+    position:fixed;
+
+    left:50%;
+    bottom:25px;
+
+    transform:translate(-50%,30px);
+
+    opacity:0;
+
+    z-index:300;
+
+    min-width:220px;
+    max-width:90vw;
+
+    padding:13px 18px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    background:rgba(30,30,30,.96);
+
+    border:1px solid rgba(255,255,255,.14);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.7);
+
+    color:#ddd;
+    font-size:11px;
+
+    transition:.4s;
+}
+
+.toast.show{
+    opacity:1;
+    transform:translate(-50%,0);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .page{
+        padding:14px 14px 70px;
+    }
+
+    .hero{
+        padding:23px 18px;
+    }
+
+    .hero h1{
+        font-size:23px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        min-height:125px;
+    }
+
+    .personCard{
+        align-items:flex-start;
+        padding:17px;
+    }
+
+    .personImage{
+        width:78px;
+        height:78px;
+        border-radius:20px;
+    }
+
+    .personInfo h3{
+        font-size:16px;
+    }
+
+    .personInfo p{
+        font-size:9px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="page">
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="brandIcon">
+            &lt;/&gt;
+        </div>
+
+        <div class="brandText">
+
+            <strong>
+                𝑨𝒍𝑲𝒉𝒘𝒂𝒓𝒊𝒛𝒎𝒊
+            </strong>
+
+            <small>
+                LEARN • CREATE • INNOVATE
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="menuButton"
+        id="menuButton">
+
+        ☰
+
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="heroContent">
+
+        <div class="hello">
+            أهلاً وسهلاً 👋
+        </div>
+
+        <h1>
+            أهلاً بك
+            <span id="studentName">
+                يا بطل
+            </span>
+        </h1>
+
+        <p class="heroText">
+
+            نورت منصتك التعليمية.
+            هنا هتلاقي الفيديوهات والاختبارات
+            الخاصة بمرحلتك الدراسية.
+
+        </p>
+
+
+        <div class="stageBadge">
+
+            <span class="stageDot"></span>
+
+            المرحلة الدراسية:
+
+            <strong id="studyStage">
+                لم يتم تحديدها
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUICK ACCESS ================= -->
+
+<div class="sectionHead">
+
+    <h2>
+        ابدأ رحلتك 🚀
+    </h2>
+
+    <span>
+        ALKHWARIZMI
+    </span>
+
+</div>
+
+
+<section class="cards">
+
+
+    <!-- VIDEOS -->
+
+    <div
+        class="card"
+        id="videosCard">
+
+        <div class="cardIcon">
+            🎬
+        </div>
+
+        <h3>
+            الفيديوهات
+        </h3>
+
+        <p>
+            شاهد الدروس التعليمية
+            الخاصة بمرحلتك الدراسية.
+        </p>
+
+        <div class="cardArrow">
+            ←
+        </div>
+
+    </div>
+
+
+    <!-- EXAMS -->
+
+    <div
+        class="card"
+        id="examsCard">
+
+        <div class="cardIcon">
+            🧠
+        </div>
+
+        <h3>
+            الاختبارات
+        </h3>
+
+        <p>
+            اختبر نفسك واعرف مستواك
+            بعد كل درس.
+        </p>
+
+        <div class="cardArrow">
+            ←
+        </div>
+
+    </div>
+
+
+    <!-- PROFILE -->
+
+    <div
+        class="card"
+        id="profileCard">
+
+        <div class="cardIcon">
+            👤
+        </div>
+
+        <h3>
+            حسابي
+        </h3>
+
+        <p>
+            بيانات حسابك والمرحلة
+            الدراسية الخاصة بك.
+        </p>
+
+        <div class="cardArrow">
+            ←
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- ================= PROGRESS ================= -->
+
+<div class="sectionHead">
+
+    <h2>
+        مستواك الدراسي 📈
+    </h2>
+
+    <span>
+        PROGRESS
+    </span>
+
+</div>
+
+
+<section class="featured">
+
+    <div class="featuredTop">
+
+        <div class="featuredIcon">
+            🎯
+        </div>
+
+        <div>
+
+            <h3>
+                رحلتك التعليمية
+            </h3>
+
+            <small>
+                استمر ولا توقف 💪
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <p>
+
+        كل درس بتخلصه بيقربك خطوة
+        من هدفك. شاهد الفيديوهات
+        وحل الاختبارات باستمرار
+        عشان تطور مستواك.
+
+    </p>
+
+
+    <div class="progressBox">
+
+        <div class="progressInfo">
+
+            <span>
+                التقدم الحالي
+            </span>
+
+            <span id="progressText">
+                0%
+            </span>
+
+        </div>
+
+        <div class="progress">
+
+            <span id="progressBar"></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TEACHER ================= -->
+
+<div class="sectionHead">
+
+    <h2>
+        عن فريق المنصة 👨‍🏫
+    </h2>
+
+    <span>
+        OUR TEAM
+    </span>
+
+</div>
+
+
+<section class="peopleSection">
+
+
+    <!-- TEACHER -->
+
+    <div class="personCard teacherCard">
+
+        <img
+            class="personImage"
+            src="teacher.jpg"
+            alt="مستر أمير"
+            onerror="this.style.display='none';">
+
+        <div class="personInfo">
+
+            <div class="personRole">
+                مدرس الرياضيات ومؤسس المحتوى التعليمي
+            </div>
+
+            <h3>
+                مستر أمير
+            </h3>
+
+            <p>
+
+                من المدرسين المتميزين في تقديم
+                المحتوى التعليمي بطريقة واضحة
+                وبسيطة، مع اهتمام كبير بفهم الطالب
+                وتطوير مستواه خطوة بخطوة.
+
+                <br>
+
+                هدفه إن الطالب ما يعتمدش على الحفظ
+                فقط، لكن يفهم ويحل ويقدر يواجه
+                أصعب الأسئلة بثقة.
+
+            </p>
+
+            <div class="personBadge">
+                ⭐ تفوق • خبرة • تعليم
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- DEVELOPER -->
+
+    <div class="personCard developerCard">
+
+        <img
+            class="personImage"
+            src="moaz.jpg"
+            alt="معاذ يسري"
+            onerror="this.style.display='none';">
+
+        <div class="personInfo">
+
+            <div class="personRole">
+                المطور وصاحب تنفيذ المنصة
+            </div>
+
+            <h3>
+                معاذ يسري
+            </h3>
+
+            <p>
+
+                المطور الذي عمل على تصميم وتنفيذ
+                منصة الخوارزمي لتقديم تجربة تعليمية
+                حديثة وسهلة للطلاب.
+
+                <br>
+
+                عمل مع مستر أمير على تحويل الفكرة
+                إلى منصة حقيقية تجمع بين المحتوى
+                التعليمي والتكنولوجيا بشكل بسيط
+                ومنظم.
+
+                <br>
+
+                وما زال مستمرًا في تطوير المنصة
+                ودعم مستر أمير لإضافة المزيد من
+                المميزات وتحسين تجربة الطلاب.
+
+            </p>
+
+            <div class="personBadge">
+                💻 تطوير • برمجة • دعم
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <strong>
+        𝑨𝒍𝑲𝒉𝒘𝒂𝒓𝒊𝒛𝒎𝒊
+    </strong>
+
+    <br>
+
+    منصة تعليمية تساعدك تتعلم
+    وتطور نفسك خطوة بخطوة 🚀
+
+    <br><br>
+
+    『 مـعـاذ يـسـري 』
+
+</footer>
+
+</div>
+
+
+<!-- ================= MENU ================= -->
+
+<div
+    class="menuOverlay"
+    id="menuOverlay">
+
+    <div class="menuPanel">
+
+        <div class="menuTop">
+
+            <h2>
+                القائمة
+            </h2>
+
+            <button
+                class="closeMenu"
+                id="closeMenu">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div class="menuLinks">
+
+            <button
+                class="menuLink"
+                id="menuHome">
+
+                🏠 الرئيسية
+
+            </button>
+
+
+            <button
+                class="menuLink"
+                id="menuVideos">
+
+                🎬 الفيديوهات
+
+            </button>
+
+
+            <button
+                class="menuLink"
+                id="menuExams">
+
+                🧠 الاختبارات
+
+            </button>
+
+
+            <button
+                class="menuLink"
+                id="menuProfile">
+
+                👤 حسابي
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div
+    class="toast"
+    id="toast">
+
+    تم فتح الصفحة
+
+</div>
+
+
+<script>
+
+/* ================= ELEMENTS ================= */
+
+const studentName =
+    document.getElementById("studentName");
+
+const studyStage =
+    document.getElementById("studyStage");
+
+const progressBar =
+    document.getElementById("progressBar");
+
+const progressText =
+    document.getElementById("progressText");
+
+const toast =
+    document.getElementById("toast");
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const menuOverlay =
+    document.getElementById("menuOverlay");
+
+const closeMenu =
+    document.getElementById("closeMenu");
+
+
+/* ================= LOAD USER ================= */
+
+function loadUser(){
+
+    const savedUser =
+        localStorage.getItem(
+            "alkhwarizmi_user"
+        );
+
+
+    if(savedUser){
+
+        try{
+
+            const user =
+                JSON.parse(savedUser);
+
+
+            if(user.name){
+
+                studentName.textContent =
+                    user.name;
+
+            }
+
+
+            if(user.studyStage){
+
+                studyStage.textContent =
+                    user.studyStage;
+
+            }
+
+
+            if(
+                typeof user.progress ===
+                "number"
+            ){
+
+                setProgress(
+                    user.progress
+                );
+
+            }
+
+        }catch(error){
+
+            console.log(
+                "بيانات المستخدم غير صالحة"
+            );
+
+        }
+
+    }
+
+}
+
+
+/* ================= PROGRESS ================= */
+
+function setProgress(value){
+
+    value =
+        Math.max(
+            0,
+            Math.min(
+                100,
+                Number(value) || 0
+            )
+        );
+
+
+    progressText.textContent =
+        value + "%";
+
+
+    setTimeout(() => {
+
+        progressBar.style.width =
+            value + "%";
+
+    },300);
+
+}
+
+
+/* ================= TOAST ================= */
+
+let toastTimer;
+
+function showToast(message){
+
+    toast.textContent =
+        message;
+
+    toast.classList.add("show");
+
+
+    clearTimeout(
+        toastTimer
+    );
+
+
+    toastTimer =
+        setTimeout(() => {
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },2500);
+
+}
+
+
+/* ================= NAVIGATION ================= */
+
+function goTo(page){
+
+    window.location.href =
+        page;
+
+}
+
+
+/* ================= VIDEOS ================= */
+
+document
+    .getElementById("videosCard")
+    .addEventListener(
+        "click",
+        () => {
+
+            goTo(
+                "videos.html"
+            );
+
+        }
+    );
+
+
+/* ================= EXAMS ================= */
+
+document
+    .getElementById("examsCard")
+    .addEventListener(
+        "click",
+        () => {
+
+            goTo(
+                "exams.html"
+            );
+
+        }
+    );
+
+
+/* ================= PROFILE ================= */
+
+document
+    .getElementById("profileCard")
+    .addEventListener(
+        "click",
+        () => {
+
+            showToast(
+                "صفحة الحساب هنكملها بعد كده 👤"
+            );
+
+        }
+    );
+
+
+/* ================= MENU ================= */
+
+menuButton.addEventListener(
+    "click",
+    () => {
+
+        menuOverlay.classList.add(
+            "show"
+        );
+
+    }
+);
+
+
+closeMenu.addEventListener(
+    "click",
+    () => {
+
+        menuOverlay.classList.remove(
+            "show"
+        );
+
+    }
+);
+
+
+menuOverlay.addEventListener(
+    "click",
+    (e) => {
+
+        if(
+            e.target ===
+            menuOverlay
+        ){
+
+            menuOverlay.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+
+/* ================= MENU HOME ================= */
+
+document
+    .getElementById("menuHome")
+    .addEventListener(
+        "click",
+        () => {
+
+            menuOverlay.classList.remove(
+                "show"
+            );
+
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+
+        }
+    );
+
+
+/* ================= MENU VIDEOS ================= */
+
+document
+    .getElementById("menuVideos")
+    .addEventListener(
+        "click",
+        () => {
+
+            goTo(
+                "videos.html"
+            );
+
+        }
+    );
+
+
+/* ================= MENU EXAMS ================= */
+
+document
+    .getElementById("menuExams")
+    .addEventListener(
+        "click",
+        () => {
+
+            goTo(
+                "exams.html"
+            );
+
+        }
+    );
+
+
+/* ================= MENU PROFILE ================= */
+
+document
+    .getElementById("menuProfile")
+    .addEventListener(
+        "click",
+        () => {
+
+            menuOverlay.classList.remove(
+                "show"
+            );
+
+            showToast(
+                "صفحة الحساب هنضيفها قريباً 👤"
+            );
+
+        }
+    );
+
+
+/* ================= START ================= */
+
+loadUser();
+
+setProgress(0);
+
+</script>
+
+</body>
+</html>

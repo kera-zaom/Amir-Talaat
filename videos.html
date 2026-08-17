@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>𝑨𝒍𝑲𝒉𝒘𝒂𝒓𝒊𝒛𝒎𝒊 | الفيديوهات</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+body{
+    min-height:100vh;
+    color:#fff;
+    background:#080808;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background:
+    radial-gradient(
+        circle at 50% 0%,
+        rgba(110,110,110,.25),
+        transparent 40%
+    ),
+    #080808;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+
+    opacity:.035;
+
+    background-image:
+    radial-gradient(
+        rgba(255,255,255,.8) 1px,
+        transparent 1px
+    );
+
+    background-size:58px 58px;
+}
+
+.app{
+    width:min(1050px,94%);
+    margin:auto;
+    padding:18px 0 70px;
+}
+
+
+/* HEADER */
+
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:22px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.brandIcon{
+    width:46px;
+    height:46px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #414141,
+        #080808
+    );
+
+    border:1px solid #555;
+
+    box-shadow:
+    0 0 25px rgba(255,255,255,.08),
+    inset 0 1px rgba(255,255,255,.12);
+
+    font-size:18px;
+}
+
+.brandText strong{
+    display:block;
+
+    font-family:Georgia,serif;
+    font-style:italic;
+
+    font-size:19px;
+    letter-spacing:1px;
+}
+
+.brandText small{
+    color:#666;
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.back{
+    width:44px;
+    height:44px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.14);
+
+    background:rgba(255,255,255,.045);
+
+    color:#fff;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.back:active{
+    transform:scale(.92);
+}
+
+
+/* HERO */
+
+.hero{
+    padding:23px 21px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(48,48,48,.82),
+        rgba(8,8,8,.97)
+    );
+
+    border:1px solid rgba(255,255,255,.13);
+
+    box-shadow:
+    0 25px 65px rgba(0,0,0,.5),
+
+    inset
+    0 1px
+    rgba(255,255,255,.07);
+
+    margin-bottom:22px;
+}
+
+.hello{
+    color:#777;
+    font-size:11px;
+    margin-bottom:7px;
+}
+
+.hero h1{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.hero h1 span{
+    color:#bbb;
+}
+
+.hero p{
+    color:#777;
+    font-size:10px;
+    line-height:1.9;
+}
+
+.stage{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+
+    margin-top:14px;
+
+    padding:8px 13px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.055);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    color:#bbb;
+
+    font-size:10px;
+}
+
+.dot{
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:#ddd;
+
+    box-shadow:
+    0 0 12px
+    rgba(255,255,255,.6);
+}
+
+
+/* SECTION */
+
+.sectionHead{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin:
+    25px 3px 12px;
+}
+
+.sectionHead h2{
+    font-size:18px;
+}
+
+.sectionHead span{
+    color:#555;
+    font-size:9px;
+}
+
+
+/* VIDEOS */
+
+.videos{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+    gap:13px;
+}
+
+.videoCard{
+    overflow:hidden;
+
+    border-radius:21px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(35,35,35,.96),
+        rgba(7,7,7,.98)
+    );
+
+    border:1px solid rgba(255,255,255,.11);
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.35),
+
+    inset
+    0 1px
+    rgba(255,255,255,.04);
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.videoCard:active{
+    transform:scale(.97);
+}
+
+.thumbnail{
+    position:relative;
+
+    width:100%;
+    aspect-ratio:16/9;
+
+    overflow:hidden;
+
+    background:#151515;
+}
+
+.thumbnail img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:.35s;
+}
+
+.videoCard:hover .thumbnail img{
+    transform:scale(1.04);
+}
+
+.play{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    width:52px;
+    height:52px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+    rgba(0,0,0,.65);
+
+    border:
+    1px solid
+    rgba(255,255,255,.25);
+
+    backdrop-filter:blur(10px);
+
+    font-size:19px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.5);
+}
+
+.videoInfo{
+    padding:15px;
+}
+
+.videoInfo h3{
+    font-size:14px;
+    margin-bottom:7px;
+
+    line-height:1.5;
+}
+
+.videoInfo p{
+    color:#666;
+
+    font-size:10px;
+
+    line-height:1.7;
+
+    display:
+    -webkit-box;
+
+    -webkit-line-clamp:2;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+}
+
+.videoGrade{
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:5px 9px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.055);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#888;
+
+    font-size:8px;
+}
+
+
+/* EMPTY */
+
+.empty{
+    display:none;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.emptyIcon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.empty h3{
+    font-size:15px;
+    margin-bottom:7px;
+}
+
+.empty p{
+    color:#666;
+    font-size:10px;
+    line-height:1.8;
+}
+
+
+/* LOADING */
+
+.loading{
+    padding:45px 0;
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:11px;
+}
+
+.spinner{
+    width:32px;
+    height:32px;
+
+    margin:0 auto 12px;
+
+    border-radius:50%;
+
+    border:
+    3px solid
+    rgba(255,255,255,.08);
+
+    border-top-color:#ddd;
+
+    animation:
+    spin .8s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
+/* PLAYER MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    padding:18px;
+
+    background:rgba(0,0,0,.78);
+
+    backdrop-filter:blur(10px);
+
+    z-index:100;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.playerBox{
+    width:min(850px,100%);
+
+    border-radius:23px;
+
+    overflow:hidden;
+
+    background:#101010;
+
+    border:1px solid rgba(255,255,255,.13);
+
+    box-shadow:
+    0 30px 100px rgba(0,0,0,.8);
+}
+
+.playerHead{
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding:14px 16px;
+}
+
+.playerTitle{
+    font-size:13px;
+    font-weight:700;
+}
+
+.close{
+    width:38px;
+    height:38px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    background:rgba(255,255,255,.05);
+
+    color:#fff;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+.player{
+    width:100%;
+    aspect-ratio:16/9;
+
+    border:0;
+
+    background:#000;
+}
+
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+
+    color:#444;
+
+    font-size:9px;
+
+    padding-top:30px;
+}
+
+.footer strong{
+    color:#777;
+}
+
+
+/* MOBILE */
+
+@media(max-width:650px){
+
+    .app{
+        width:92%;
+        padding-top:14px;
+    }
+
+    .hero{
+        padding:21px 17px;
+    }
+
+    .hero h1{
+        font-size:22px;
+    }
+
+    .videos{
+        grid-template-columns:1fr;
+    }
+
+    .videoCard{
+        border-radius:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="brandIcon">
+                ▶
+            </div>
+
+            <div class="brandText">
+
+                <strong>
+                    𝑨𝒍𝑲𝒉𝒘𝒂𝒓𝒊𝒛𝒎𝒊
+                </strong>
+
+                <small>
+                    VIDEO LESSONS
+                </small>
+
+            </div>
+
+        </div>
+
+        <button
+            class="back"
+            onclick="history.back()">
+
+            →
+        </button>
+
+    </header>
+
+
+    <section class="hero">
+
+        <div class="hello">
+            أهلاً بيك 👋
+        </div>
+
+        <h1>
+            فيديوهاتك
+            <span id="studentName">
+                يا بطل
+            </span>
+        </h1>
+
+        <p>
+            هنا هتلاقي كل الفيديوهات والدروس
+            الخاصة بمرحلتك الدراسية.
+        </p>
+
+        <div class="stage">
+
+            <span class="dot"></span>
+
+            المرحلة:
+            
+            <strong id="studyStage">
+                جاري التحميل...
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <div class="sectionHead">
+
+        <h2>
+            دروسك 🎬
+        </h2>
+
+        <span id="videoCount">
+            —
+        </span>
+
+    </div>
+
+
+    <div
+        id="loading"
+        class="loading">
+
+        <div class="spinner"></div>
+
+        جاري تحميل الفيديوهات...
+
+    </div>
+
+
+    <section
+        id="videos"
+        class="videos">
+    </section>
+
+
+    <div
+        id="empty"
+        class="empty">
+
+        <div class="emptyIcon">
+            🎬
+        </div>
+
+        <h3>
+            مفيش فيديوهات لسه
+        </h3>
+
+        <p>
+            مفيش فيديوهات مضافة لمرحلتك الدراسية
+            حاليًا. ارجع تاني بعد شوية.
+        </p>
+
+    </div>
+
+
+    <footer class="footer">
+
+        <strong>
+            𝑨𝒍𝑲𝒉𝒘𝒂𝒓𝒊𝒛𝒎𝒊
+        </strong>
+
+        <br>
+
+        منصة تعليمية تساعدك تتعلم
+        وتطور نفسك خطوة بخطوة 🚀
+
+    </footer>
+
+</div>
+
+
+<!-- PLAYER -->
+
+<div
+    class="modal"
+    id="modal">
+
+    <div class="playerBox">
+
+        <div class="playerHead">
+
+            <div
+                class="playerTitle"
+                id="playerTitle">
+
+                الفيديو
+
+            </div>
+
+            <button
+                class="close"
+                onclick="closePlayer()">
+
+                ×
+
+            </button>
+
+        </div>
+
+        <iframe
+            id="player"
+            class="player"
+            allowfullscreen
+            allow=
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================================
+   SUPABASE
+========================================= */
+
+const SUPABASE_URL =
+"https://mxhtmolljnjfqhxcgjff.supabase.co";
+
+const SUPABASE_ANON_KEY =
+"sb_publishable_bzaMkNmdzkYRqbPZHIov6A_pPfVyW4n";
+
+const supabaseClient =
+supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+);
+
+
+/* =========================================
+   ELEMENTS
+========================================= */
+
+const studentName =
+document.getElementById(
+    "studentName"
+);
+
+const studyStage =
+document.getElementById(
+    "studyStage"
+);
+
+const videosContainer =
+document.getElementById(
+    "videos"
+);
+
+const loading =
+document.getElementById(
+    "loading"
+);
+
+const empty =
+document.getElementById(
+    "empty"
+);
+
+const videoCount =
+document.getElementById(
+    "videoCount"
+);
+
+const modal =
+document.getElementById(
+    "modal"
+);
+
+const player =
+document.getElementById(
+    "player"
+);
+
+const playerTitle =
+document.getElementById(
+    "playerTitle"
+);
+
+
+/* =========================================
+   GET USER
+========================================= */
+
+async function getUser(){
+
+    const {
+        data:{user},
+        error
+    } =
+    await supabaseClient.auth.getUser();
+
+
+    if(error || !user){
+
+        window.location.href =
+        "index.html";
+
+        return null;
+    }
+
+
+    return user;
+}
+
+
+/* =========================================
+   LOAD PROFILE
+========================================= */
+
+async function loadProfile(userId){
+
+    const {data,error} =
+    await supabaseClient
+    .from("profiles")
+    .select("*")
+    .eq("id",userId)
+    .single();
+
+
+    if(error){
+
+        console.error(
+            "Profile error:",
+            error
+        );
+
+        return null;
+    }
+
+
+    if(data.name){
+
+        studentName.textContent =
+        data.name;
+
+    }else if(data.full_name){
+
+        studentName.textContent =
+        data.full_name;
+
+    }
+
+
+    if(data.study_stage){
+
+        studyStage.textContent =
+        data.study_stage;
+
+    }else if(data.grade){
+
+        studyStage.textContent =
+        data.grade;
+
+    }else{
+
+        studyStage.textContent =
+        "غير محددة";
+
+    }
+
+
+    return data;
+}
+
+
+/* =========================================
+   LOAD VIDEOS
+========================================= */
+
+async function loadVideos(grade){
+
+    loading.style.display =
+    "block";
+
+    empty.style.display =
+    "none";
+
+    videosContainer.innerHTML =
+    "";
+
+
+    const {data,error} =
+    await supabaseClient
+    .from("videos")
+    .select("*")
+    .eq("grade",grade)
+    .order(
+        "created_at",
+        {
+            ascending:false
+        }
+    );
+
+
+    loading.style.display =
+    "none";
+
+
+    if(error){
+
+        console.error(
+            "Videos error:",
+            error
+        );
+
+        empty.style.display =
+        "block";
+
+        empty.querySelector("h3")
+        .textContent =
+        "حصل خطأ";
+
+        empty.querySelector("p")
+        .textContent =
+        "تأكد من اتصال الإنترنت وإعدادات قاعدة البيانات.";
+
+        return;
+    }
+
+
+    videoCount.textContent =
+    `${data.length} فيديو`;
+
+
+    if(!data.length){
+
+        empty.style.display =
+        "block";
+
+        return;
+    }
+
+
+    data.forEach(video => {
+
+        const card =
+        document.createElement(
+            "article"
+        );
+
+        card.className =
+        "videoCard";
+
+
+        const thumbnail =
+        video.thumbnail_url ||
+        createPlaceholder();
+
+
+        card.innerHTML = `
+
+            <div class="thumbnail">
+
+                <img
+                    src="${escapeHtml(thumbnail)}"
+                    alt="${escapeHtml(video.title || "فيديو")}"
+                    loading="lazy"
+                    onerror="this.src='${createPlaceholder()}'">
+
+                <div class="play">
+                    ▶
+                </div>
+
+            </div>
+
+            <div class="videoInfo">
+
+                <h3>
+                    ${escapeHtml(
+                        video.title ||
+                        "فيديو بدون عنوان"
+                    )}
+                </h3>
+
+                <p>
+                    ${escapeHtml(
+                        video.description ||
+                        "شاهد الدرس الآن."
+                    )}
+                </p>
+
+                <span class="videoGrade">
+                    ${escapeHtml(
+                        video.grade || grade
+                    )}
+                </span>
+
+            </div>
+
+        `;
+
+
+        card.addEventListener(
+            "click",
+            () => {
+
+                openPlayer(
+                    video.video_url,
+                    video.title ||
+                    "الفيديو"
+                );
+
+            }
+        );
+
+
+        videosContainer.appendChild(
+            card
+        );
+
+    });
+
+}
+
+
+/* =========================================
+   OPEN PLAYER
+========================================= */
+
+function openPlayer(url,title){
+
+    if(!url){
+
+        alert(
+            "رابط الفيديو غير موجود."
+        );
+
+        return;
+    }
+
+
+    playerTitle.textContent =
+    title;
+
+
+    player.src =
+    convertVideoUrl(url);
+
+
+    modal.classList.add(
+        "show"
+    );
+
+}
+
+
+/* =========================================
+   CLOSE PLAYER
+========================================= */
+
+function closePlayer(){
+
+    modal.classList.remove(
+        "show"
+    );
+
+    player.src =
+    "";
+
+}
+
+
+/* =========================================
+   CONVERT VIDEO URL
+========================================= */
+
+function convertVideoUrl(url){
+
+    /*
+       لو الرابط YouTube عادي
+       نحوله تلقائيًا إلى embed.
+    */
+
+    try{
+
+        const parsed =
+        new URL(url);
+
+
+        if(
+            parsed.hostname.includes(
+                "youtube.com"
+            )
+        ){
+
+            const id =
+            parsed.searchParams.get(
+                "v"
+            );
+
+            if(id){
+
+                return
+                `https://www.youtube.com/embed/${id}?autoplay=1`;
+
+            }
+
+        }
+
+
+        if(
+            parsed.hostname.includes(
+                "youtu.be"
+            )
+        ){
+
+            const id =
+            parsed.pathname
+            .replace("/","");
+
+            if(id){
+
+                return
+                `https://www.youtube.com/embed/${id}?autoplay=1`;
+
+            }
+
+        }
+
+    }catch(e){
+
+        console.log(e);
+
+    }
+
+
+    return url;
+}
+
+
+/* =========================================
+   ESCAPE HTML
+========================================= */
+
+function escapeHtml(value){
+
+    return String(value)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+function createPlaceholder(){
+
+    return "data:image/svg+xml," +
+    encodeURIComponent(`
+
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 800 450">
+
+            <rect
+                width="800"
+                height="450"
+                fill="#151515"/>
+
+            <text
+                x="400"
+                y="225"
+                fill="#777"
+                font-size="32"
+                text-anchor="middle"
+                dominant-baseline="middle">
+
+                ALKHWARIZMI
+
+            </text>
+
+        </svg>
+
+    `);
+
+}
+
+
+/* =========================================
+   START
+========================================= */
+
+async function start(){
+
+    const user =
+    await getUser();
+
+
+    if(!user){
+        return;
+    }
+
+
+    const profile =
+    await loadProfile(
+        user.id
+    );
+
+
+    if(!profile){
+        return;
+    }
+
+
+    const grade =
+    profile.study_stage ||
+    profile.grade;
+
+
+    if(!grade){
+
+        loading.style.display =
+        "none";
+
+        studyStage.textContent =
+        "غير محددة";
+
+        empty.style.display =
+        "block";
+
+        empty.querySelector("h3")
+        .textContent =
+        "حدد مرحلتك الدراسية";
+
+        empty.querySelector("p")
+        .textContent =
+        "لا يمكن عرض الفيديوهات قبل تحديد السنة الدراسية في حسابك.";
+
+        return;
+    }
+
+
+    await loadVideos(
+        grade
+    );
+
+}
+
+
+/* =========================================
+   MODAL EVENTS
+========================================= */
+
+modal.addEventListener(
+    "click",
+    (e) => {
+
+        if(
+            e.target === modal
+        ){
+
+            closePlayer();
+
+        }
+
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    (e) => {
+
+        if(e.key === "Escape"){
+
+            closePlayer();
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   RUN
+========================================= */
+
+start();
+
+</script>
+
+</body>
+</html>

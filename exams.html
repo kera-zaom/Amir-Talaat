@@ -1,0 +1,2290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>𝑨𝒍𝒌𝒉𝒐𝒓𝒊𝒛𝒎𝒊 | الاختبارات</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    color:#fff;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #343842 0%,
+            #1c1e23 35%,
+            #0c0e12 72%,
+            #07080a 100%
+        );
+
+    overflow-x:hidden;
+}
+
+.page{
+
+    min-height:100vh;
+
+    padding:
+        20px
+        17px
+        110px;
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:22px;
+
+    animation:
+        headerIn
+        .7s
+        ease
+        both;
+}
+
+.back{
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.back:active{
+    transform:scale(.9);
+}
+
+.logo{
+
+    text-align:center;
+
+    direction:ltr;
+
+    font-family:Georgia,serif;
+
+    font-style:italic;
+
+    font-size:21px;
+}
+
+.logo-sub{
+
+    text-align:center;
+
+    color:#70737b;
+
+    font-size:7px;
+
+    letter-spacing:2px;
+
+    margin-top:3px;
+}
+
+
+/* =========================
+   STUDENT CARD
+========================= */
+
+.student-card{
+
+    padding:18px;
+
+    border-radius:23px;
+
+    margin-bottom:14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+.student-label{
+
+    color:#777b84;
+
+    font-size:8px;
+
+    margin-bottom:6px;
+}
+
+.student-name{
+
+    font-size:17px;
+
+    font-weight:800;
+}
+
+.student-stage{
+
+    display:inline-block;
+
+    margin-top:7px;
+
+    padding:
+        5px
+        9px;
+
+    border-radius:9px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:#999da6;
+
+    font-size:8px;
+}
+
+
+/* =========================
+   EXAM INFO
+========================= */
+
+.exam-info-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:23px 19px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.30);
+
+    animation:
+        heroIn
+        .7s
+        ease
+        both;
+}
+
+.exam-info-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    left:-100px;
+    top:-110px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(111,125,255,.20),
+            transparent 70%
+        );
+
+    filter:blur(20px);
+}
+
+.exam-info-content{
+
+    position:relative;
+
+    z-index:2;
+}
+
+.exam-badge{
+
+    display:inline-block;
+
+    padding:
+        6px
+        10px;
+
+    border-radius:10px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    color:#aaaeb7;
+
+    font-size:8px;
+
+    margin-bottom:10px;
+}
+
+.exam-title{
+
+    font-size:26px;
+
+    font-weight:800;
+
+    line-height:1.4;
+}
+
+.exam-description{
+
+    color:#858991;
+
+    font-size:10px;
+
+    line-height:1.8;
+
+    margin-top:8px;
+}
+
+.exam-stats{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:8px;
+
+    margin-top:18px;
+}
+
+.stat{
+
+    padding:11px 6px;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    background:
+        rgba(0,0,0,.18);
+
+    border:
+        1px solid
+        rgba(255,255,255,.05);
+}
+
+.stat-number{
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+.stat-label{
+
+    color:#6f737b;
+
+    font-size:7px;
+
+    margin-top:4px;
+}
+
+
+/* =========================
+   START SCREEN
+========================= */
+
+.start-screen{
+
+    margin-top:15px;
+
+    padding:22px;
+
+    border-radius:24px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    text-align:center;
+}
+
+.start-title{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    margin-bottom:7px;
+}
+
+.start-text{
+
+    color:#777b83;
+
+    font-size:9px;
+
+    line-height:1.8;
+
+    margin-bottom:16px;
+}
+
+.start-button{
+
+    width:100%;
+
+    height:47px;
+
+    border:0;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #aaa
+        );
+
+    color:#000;
+
+    font-family:inherit;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.start-button:active{
+    transform:scale(.97);
+}
+
+
+/* =========================
+   EXAM AREA
+========================= */
+
+.exam-area{
+
+    display:none;
+
+    margin-top:15px;
+}
+
+.exam-area.show{
+    display:block;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.exam-top{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    margin-bottom:13px;
+}
+
+.question-count{
+
+    color:#999da5;
+
+    font-size:9px;
+}
+
+.timer{
+
+    min-width:80px;
+
+    padding:
+        8px
+        11px;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    text-align:center;
+
+    font-size:10px;
+
+    font-weight:700;
+}
+
+.timer.warning{
+
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.12);
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress{
+
+    height:5px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:
+        rgba(255,255,255,.08);
+
+    margin-bottom:15px;
+}
+
+.progress-fill{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #686fca,
+            #a7acd9
+        );
+
+    transition:.3s;
+}
+
+
+/* =========================
+   QUESTION CARD
+========================= */
+
+.question-card{
+
+    padding:22px 18px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,.20);
+}
+
+.question-number{
+
+    color:#777b84;
+
+    font-size:8px;
+
+    margin-bottom:9px;
+}
+
+.question-text{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+}
+
+
+/* =========================
+   ANSWERS
+========================= */
+
+.answers{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:9px;
+}
+
+.answer{
+
+    width:100%;
+
+    min-height:50px;
+
+    padding:
+        12px
+        14px;
+
+    border-radius:14px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        rgba(255,255,255,.04);
+
+    color:#ddd;
+
+    font-family:inherit;
+
+    font-size:10px;
+
+    text-align:right;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.answer:active{
+    transform:scale(.98);
+}
+
+.answer.selected{
+
+    background:
+        rgba(255,255,255,.12);
+
+    border-color:
+        rgba(255,255,255,.28);
+
+    color:#fff;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.exam-navigation{
+
+    display:flex;
+
+    gap:9px;
+
+    margin-top:13px;
+}
+
+.exam-navigation button{
+
+    height:45px;
+
+    border:0;
+
+    border-radius:13px;
+
+    font-family:inherit;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+.prev-button{
+
+    width:45px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:#aaa;
+}
+
+.next-button{
+
+    flex:1;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #aaa
+        );
+
+    color:#000;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result{
+
+    display:none;
+
+    margin-top:15px;
+
+    padding:28px 20px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    animation:
+        heroIn
+        .7s
+        ease
+        both;
+}
+
+.result.show{
+    display:block;
+}
+
+.result-icon{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+}
+
+.result-title{
+
+    font-size:22px;
+
+    font-weight:800;
+}
+
+.result-score{
+
+    font-size:38px;
+
+    font-weight:900;
+
+    margin-top:12px;
+}
+
+.result-percent{
+
+    color:#858991;
+
+    font-size:10px;
+
+    margin-top:4px;
+}
+
+.result-message{
+
+    color:#777b83;
+
+    font-size:10px;
+
+    line-height:1.8;
+
+    margin-top:12px;
+}
+
+.result-buttons{
+
+    display:flex;
+
+    gap:8px;
+
+    margin-top:18px;
+}
+
+.result-button{
+
+    flex:1;
+
+    height:43px;
+
+    border:0;
+
+    border-radius:13px;
+
+    font-family:inherit;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+.retry{
+
+    background:
+        rgba(255,255,255,.07);
+
+    color:#fff;
+}
+
+.home{
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #aaa
+        );
+
+    color:#000;
+}
+
+
+/* =========================
+   BOTTOM NAV
+========================= */
+
+.bottom{
+
+    position:fixed;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    z-index:50;
+
+    padding:
+        10px
+        15px
+        calc(
+            10px +
+            env(safe-area-inset-bottom)
+        );
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(7,8,10,.98),
+            rgba(7,8,10,.82),
+            transparent
+        );
+
+    backdrop-filter:blur(12px);
+}
+
+.nav{
+
+    max-width:600px;
+
+    height:58px;
+
+    margin:auto;
+
+    border-radius:22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        rgba(255,255,255,.055);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-around;
+}
+
+.nav-button{
+
+    width:48px;
+    height:48px;
+
+    border:0;
+
+    border-radius:17px;
+
+    background:transparent;
+
+    color:#6d7078;
+
+    font-size:19px;
+
+    cursor:pointer;
+}
+
+.nav-button.active{
+
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.09);
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:92px;
+
+    transform:
+        translateX(-50%)
+        translateY(20px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    z-index:100;
+
+    min-width:220px;
+
+    max-width:85vw;
+
+    padding:
+        12px
+        16px;
+
+    border-radius:15px;
+
+    background:
+        rgba(25,25,28,.96);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    text-align:center;
+
+    color:#ddd;
+
+    font-size:10px;
+
+    transition:.3s;
+}
+
+.toast.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes headerIn{
+
+    from{
+        opacity:0;
+        transform:translateY(-18px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes heroIn{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(25px)
+            scale(.97);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:390px){
+
+    .exam-title{
+        font-size:23px;
+    }
+
+    .question-text{
+        font-size:16px;
+    }
+
+    .exam-stats{
+        gap:5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <button
+            class="back"
+            onclick="goBack()">
+
+            →
+
+        </button>
+
+
+        <div>
+
+            <div class="logo">
+                𝑨𝒍𝒌𝒉𝒐𝒓𝒊𝒛𝒎𝒊
+            </div>
+
+            <div class="logo-sub">
+                MATHEMATICS PLATFORM
+            </div>
+
+        </div>
+
+
+        <div style="width:44px"></div>
+
+    </header>
+
+
+    <!-- STUDENT -->
+
+    <section class="student-card">
+
+        <div class="student-label">
+            الطالب
+        </div>
+
+        <div
+            id="studentName"
+            class="student-name">
+
+            جاري التحميل...
+
+        </div>
+
+        <div
+            id="studentStage"
+            class="student-stage">
+
+            جاري التحميل...
+
+        </div>
+
+    </section>
+
+
+    <!-- EXAM INFO -->
+
+    <section class="exam-info-card">
+
+        <div class="exam-info-content">
+
+            <div class="exam-badge">
+                📝 اختبار الطالب
+            </div>
+
+
+            <div
+                id="examTitle"
+                class="exam-title">
+
+                اختبار الرياضيات
+
+            </div>
+
+
+            <div class="exam-description">
+
+                اختبر فهمك للمادة وحاول تحل
+                كل سؤال بنفسك قبل الانتقال للسؤال التالي.
+
+            </div>
+
+
+            <div class="exam-stats">
+
+                <div class="stat">
+
+                    <div
+                        id="questionTotal"
+                        class="stat-number">
+
+                        10
+
+                    </div>
+
+                    <div class="stat-label">
+                        سؤال
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div
+                        id="timeTotal"
+                        class="stat-number">
+
+                        15
+
+                    </div>
+
+                    <div class="stat-label">
+                        دقيقة
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div
+                        id="scoreTotal"
+                        class="stat-number">
+
+                        10
+
+                    </div>
+
+                    <div class="stat-label">
+                        درجة
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- START -->
+
+    <section
+        class="start-screen"
+        id="startScreen">
+
+        <div class="start-title">
+            جاهز تبدأ؟ 🔥
+        </div>
+
+        <div class="start-text">
+
+            بمجرد الضغط على ابدأ سيبدأ الوقت.
+            حاول تعتمد على نفسك وما تخرجش من الاختبار.
+
+        </div>
+
+
+        <button
+            class="start-button"
+            onclick="startExam()">
+
+            ابدأ الاختبار
+
+        </button>
+
+    </section>
+
+
+    <!-- EXAM -->
+
+    <section
+        class="exam-area"
+        id="examArea">
+
+
+        <div class="exam-top">
+
+            <div
+                id="questionCount"
+                class="question-count">
+
+                السؤال 1 من 10
+
+            </div>
+
+
+            <div
+                id="timer"
+                class="timer">
+
+                15:00
+
+            </div>
+
+        </div>
+
+
+        <div class="progress">
+
+            <div
+                id="progressFill"
+                class="progress-fill">
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div
+                id="questionNumber"
+                class="question-number">
+
+                السؤال 1
+
+            </div>
+
+
+            <div
+                id="questionText"
+                class="question-text">
+
+                جاري تحميل السؤال...
+
+            </div>
+
+
+            <div
+                id="answers"
+                class="answers">
+            </div>
+
+        </div>
+
+
+        <div class="exam-navigation">
+
+            <button
+                class="prev-button"
+                id="prevButton"
+                onclick="previousQuestion()">
+
+                ←
+
+            </button>
+
+
+            <button
+                class="next-button"
+                id="nextButton"
+                onclick="nextQuestion()">
+
+                التالي
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT -->
+
+    <section
+        class="result"
+        id="result">
+
+        <div class="result-icon">
+            🏆
+        </div>
+
+
+        <div class="result-title">
+            انتهى الاختبار
+        </div>
+
+
+        <div
+            id="resultScore"
+            class="result-score">
+
+            0 / 10
+
+        </div>
+
+
+        <div
+            id="resultPercent"
+            class="result-percent">
+
+            0%
+
+        </div>
+
+
+        <div
+            id="resultMessage"
+            class="result-message">
+
+            أحسنت!
+
+        </div>
+
+
+        <div class="result-buttons">
+
+            <button
+                class="result-button retry"
+                onclick="location.reload()">
+
+                إعادة الاختبار
+
+            </button>
+
+
+            <button
+                class="result-button home"
+                onclick="goHome()">
+
+                الرئيسية
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom">
+
+    <nav class="nav">
+
+        <button
+            class="nav-button"
+            onclick="goHome()">
+
+            ⌂
+
+        </button>
+
+
+        <button
+            class="nav-button"
+            onclick="goCourses()">
+
+            📚
+
+        </button>
+
+
+        <button
+            class="nav-button active">
+
+            📝
+
+        </button>
+
+
+        <button
+            class="nav-button"
+            onclick="contactDeveloper()">
+
+            👨‍💻
+
+        </button>
+
+    </nav>
+
+</div>
+
+
+<div
+    class="toast"
+    id="toast">
+
+    جاري الحفظ...
+
+</div>
+
+
+<script>
+
+/* ==================================================
+   بيانات الطالب
+================================================== */
+
+function getStudentData(){
+
+    let student = null;
+
+
+    try{
+
+        const saved =
+            localStorage.getItem(
+                "studentData"
+            );
+
+        if(saved){
+
+            student =
+                JSON.parse(saved);
+
+        }
+
+    }catch(error){
+
+        console.error(error);
+
+    }
+
+
+    if(!student){
+
+        const fullName =
+            localStorage.getItem(
+                "fullName"
+            );
+
+        const studyStage =
+            localStorage.getItem(
+                "studyStage"
+            );
+
+
+        if(
+            fullName ||
+            studyStage
+        ){
+
+            student = {
+
+                fullName:
+                    fullName || "",
+
+                studyStage:
+                    studyStage || ""
+
+            };
+
+        }
+
+    }
+
+
+    return student;
+
+}
+
+
+function loadStudent(){
+
+    const student =
+        getStudentData();
+
+
+    document
+        .getElementById("studentName")
+        .textContent =
+        student?.fullName ||
+        "الطالب";
+
+
+    document
+        .getElementById("studentStage")
+        .textContent =
+        student?.studyStage ||
+        "المرحلة غير محددة";
+
+}
+
+
+loadStudent();
+
+
+/* ==================================================
+   الاختبار المختار
+================================================== */
+
+const selectedExam =
+    localStorage.getItem(
+        "selectedExam"
+    );
+
+
+document
+    .getElementById("examTitle")
+    .textContent =
+    selectedExam ||
+    "اختبار الرياضيات";
+
+
+/* ==================================================
+   أسئلة تجريبية
+================================================== */
+
+/*
+   لاحقاً الأدمن هو اللي هيضيف الأسئلة
+   من قاعدة البيانات.
+
+   الإجابة الصحيحة تبدأ من index 0.
+*/
+
+const questions = [
+
+    {
+        text:"ما ناتج 5 + 7 ؟",
+        answers:[
+            "10",
+            "11",
+            "12",
+            "13"
+        ],
+        correct:2
+    },
+
+    {
+        text:"ما ناتج 8 × 3 ؟",
+        answers:[
+            "21",
+            "24",
+            "27",
+            "32"
+        ],
+        correct:1
+    },
+
+    {
+        text:"إذا كان س + 5 = 12، فما قيمة س؟",
+        answers:[
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        correct:2
+    },
+
+    {
+        text:"ما مساحة مربع طول ضلعه 4 سم؟",
+        answers:[
+            "8 سم²",
+            "12 سم²",
+            "16 سم²",
+            "20 سم²"
+        ],
+        correct:2
+    },
+
+    {
+        text:"ما قيمة 10 ÷ 2 ؟",
+        answers:[
+            "2",
+            "4",
+            "5",
+            "8"
+        ],
+        correct:2
+    },
+
+    {
+        text:"أي من الآتي عدد أولي؟",
+        answers:[
+            "9",
+            "15",
+            "17",
+            "21"
+        ],
+        correct:2
+    },
+
+    {
+        text:"ما محيط مربع طول ضلعه 6 سم؟",
+        answers:[
+            "12 سم",
+            "18 سم",
+            "24 سم",
+            "36 سم"
+        ],
+        correct:2
+    },
+
+    {
+        text:"ما ناتج 3² ؟",
+        answers:[
+            "6",
+            "9",
+            "12",
+            "15"
+        ],
+        correct:1
+    },
+
+    {
+        text:"إذا كان ص = 4، فما قيمة 2ص + 3؟",
+        answers:[
+            "7",
+            "9",
+            "11",
+            "12"
+        ],
+        correct:2
+    },
+
+    {
+        text:"ما الكسر المكافئ لـ 1/2؟",
+        answers:[
+            "2/3",
+            "2/4",
+            "3/5",
+            "4/6"
+        ],
+        correct:1
+    }
+
+];
+
+
+/* ==================================================
+   متغيرات الاختبار
+================================================== */
+
+let currentQuestion = 0;
+
+let selectedAnswers =
+    new Array(
+        questions.length
+    ).fill(null);
+
+let examStarted = false;
+
+let timeLeft = 15 * 60;
+
+let timerInterval = null;
+
+
+/* ==================================================
+   تحديث عدد الأسئلة
+================================================== */
+
+document
+    .getElementById("questionTotal")
+    .textContent =
+    questions.length;
+
+document
+    .getElementById("scoreTotal")
+    .textContent =
+    questions.length;
+
+
+/* ==================================================
+   بدء الاختبار
+================================================== */
+
+function startExam(){
+
+    examStarted = true;
+
+
+    document
+        .getElementById("startScreen")
+        .style.display =
+        "none";
+
+
+    document
+        .getElementById("examArea")
+        .classList.add("show");
+
+
+    renderQuestion();
+
+    startTimer();
+
+}
+
+
+/* ==================================================
+   عرض السؤال
+================================================== */
+
+function renderQuestion(){
+
+    const question =
+        questions[currentQuestion];
+
+
+    document
+        .getElementById("questionCount")
+        .textContent =
+        `السؤال ${currentQuestion + 1} من ${questions.length}`;
+
+
+    document
+        .getElementById("questionNumber")
+        .textContent =
+        `السؤال ${currentQuestion + 1}`;
+
+
+    document
+        .getElementById("questionText")
+        .textContent =
+        question.text;
+
+
+    const answers =
+        document.getElementById(
+            "answers"
+        );
+
+
+    answers.innerHTML = "";
+
+
+    question.answers.forEach(
+        (answer,index) => {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.className =
+                "answer";
+
+
+            button.textContent =
+                answer;
+
+
+            if(
+                selectedAnswers[
+                    currentQuestion
+                ] === index
+            ){
+
+                button.classList.add(
+                    "selected"
+                );
+
+            }
+
+
+            button.onclick =
+                () => {
+
+                    selectAnswer(index);
+
+                };
+
+
+            answers.appendChild(
+                button
+            );
+
+        }
+    );
+
+
+    const progress =
+        (
+            (currentQuestion + 1)
+            /
+            questions.length
+        ) * 100;
+
+
+    document
+        .getElementById(
+            "progressFill"
+        )
+        .style.width =
+        progress + "%";
+
+
+    document
+        .getElementById(
+            "prevButton"
+        )
+        .style.visibility =
+        currentQuestion === 0
+        ? "hidden"
+        : "visible";
+
+
+    document
+        .getElementById(
+            "nextButton"
+        )
+        .textContent =
+        currentQuestion ===
+        questions.length - 1
+        ? "إنهاء الاختبار"
+        : "التالي";
+
+}
+
+
+/* ==================================================
+   اختيار إجابة
+================================================== */
+
+function selectAnswer(index){
+
+    selectedAnswers[
+        currentQuestion
+    ] = index;
+
+
+    renderQuestion();
+
+}
+
+
+/* ==================================================
+   التالي
+================================================== */
+
+function nextQuestion(){
+
+    if(
+        selectedAnswers[
+            currentQuestion
+        ] === null
+    ){
+
+        showToast(
+            "⚠️ اختار إجابة الأول"
+        );
+
+        return;
+
+    }
+
+
+    if(
+        currentQuestion <
+        questions.length - 1
+    ){
+
+        currentQuestion++;
+
+        renderQuestion();
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }else{
+
+        finishExam();
+
+    }
+
+}
+
+
+/* ==================================================
+   السابق
+================================================== */
+
+function previousQuestion(){
+
+    if(
+        currentQuestion > 0
+    ){
+
+        currentQuestion--;
+
+        renderQuestion();
+
+    }
+
+}
+
+
+/* ==================================================
+   المؤقت
+================================================== */
+
+function startTimer(){
+
+    updateTimer();
+
+
+    timerInterval =
+        setInterval(
+            () => {
+
+                timeLeft--;
+
+                updateTimer();
+
+
+                if(
+                    timeLeft <= 0
+                ){
+
+                    clearInterval(
+                        timerInterval
+                    );
+
+                    finishExam();
+
+                }
+
+            },
+            1000
+        );
+
+}
+
+
+/* ==================================================
+   تحديث المؤقت
+================================================== */
+
+function updateTimer(){
+
+    const minutes =
+        Math.floor(
+            timeLeft / 60
+        );
+
+
+    const seconds =
+        timeLeft % 60;
+
+
+    const formatted =
+        String(minutes)
+        .padStart(2,"0")
+        +
+        ":"
+        +
+        String(seconds)
+        .padStart(2,"0");
+
+
+    const timer =
+        document.getElementById(
+            "timer"
+        );
+
+
+    timer.textContent =
+        formatted;
+
+
+    if(
+        timeLeft <= 60
+    ){
+
+        timer.classList.add(
+            "warning"
+        );
+
+    }
+
+}
+
+
+/* ==================================================
+   إنهاء الاختبار
+================================================== */
+
+function finishExam(){
+
+    if(!examStarted){
+        return;
+    }
+
+
+    examStarted = false;
+
+
+    clearInterval(
+        timerInterval
+    );
+
+
+    let score = 0;
+
+
+    questions.forEach(
+        (question,index) => {
+
+            if(
+                selectedAnswers[index]
+                ===
+                question.correct
+            ){
+
+                score++;
+
+            }
+
+        }
+    );
+
+
+    const percent =
+        Math.round(
+            (
+                score /
+                questions.length
+            ) * 100
+        );
+
+
+    document
+        .getElementById(
+            "examArea"
+        )
+        .style.display =
+        "none";
+
+
+    document
+        .getElementById(
+            "result"
+        )
+        .classList.add(
+            "show"
+        );
+
+
+    document
+        .getElementById(
+            "resultScore"
+        )
+        .textContent =
+        `${score} / ${questions.length}`;
+
+
+    document
+        .getElementById(
+            "resultPercent"
+        )
+        .textContent =
+        `${percent}%`;
+
+
+    let message;
+
+
+    if(percent >= 90){
+
+        message =
+            "🔥 ممتاز جدًا! أنت جاهز للمعركة.";
+
+    }
+    else if(percent >= 75){
+
+        message =
+            "👏 شغل ممتاز، مستواك كويس جدًا.";
+
+    }
+    else if(percent >= 50){
+
+        message =
+            "💪 كويس، لكن محتاج شوية مراجعة.";
+
+    }
+    else{
+
+        message =
+            "📚 راجع الدرس وحاول مرة تانية.";
+
+    }
+
+
+    document
+        .getElementById(
+            "resultMessage"
+        )
+        .textContent =
+        message;
+
+
+    /* حفظ آخر نتيجة */
+
+    const resultData = {
+
+        exam:
+            selectedExam ||
+            "اختبار الرياضيات",
+
+        score:
+            score,
+
+        total:
+            questions.length,
+
+        percent:
+            percent,
+
+        date:
+            new Date()
+            .toISOString()
+
+    };
+
+
+    localStorage.setItem(
+        "lastExamResult",
+        JSON.stringify(
+            resultData
+        )
+    );
+
+
+    showToast(
+        "✅ تم إنهاء الاختبار وحفظ النتيجة"
+    );
+
+}
+
+
+/* ==================================================
+   الرئيسية
+================================================== */
+
+function goHome(){
+
+    window.location.href =
+        "home.html";
+
+}
+
+
+/* ==================================================
+   الكورسات
+================================================== */
+
+function goCourses(){
+
+    window.location.href =
+        "courses.html";
+
+}
+
+
+/* ==================================================
+   رجوع
+================================================== */
+
+function goBack(){
+
+    if(examStarted){
+
+        const leave =
+            confirm(
+                "أنت داخل الاختبار. هل تريد الخروج؟"
+            );
+
+
+        if(!leave){
+            return;
+        }
+
+    }
+
+
+    window.history.back();
+
+}
+
+
+/* ==================================================
+   المطور
+================================================== */
+
+function contactDeveloper(){
+
+    window.open(
+        "https://instagram.com/xyi_1q",
+        "_blank"
+    );
+
+}
+
+
+/* ==================================================
+   Toast
+================================================== */
+
+let toastTimer;
+
+
+function showToast(message){
+
+    const toast =
+        document.getElementById(
+            "toast"
+        );
+
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        toastTimer
+    );
+
+
+    toastTimer =
+        setTimeout(
+            () => {
+
+                toast.classList.remove(
+                    "show"
+                );
+
+            },
+            2200
+        );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
