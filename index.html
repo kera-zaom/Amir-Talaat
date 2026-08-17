@@ -1020,6 +1020,74 @@ body::after{
 
 
 /* =========================
+   ADMIN BUTTON
+========================= */
+
+.adminAccess{
+    position:fixed;
+
+    left:18px;
+    bottom:18px;
+
+    z-index:90;
+}
+
+.adminAccess a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    min-height:38px;
+
+    padding:0 14px;
+
+    border-radius:14px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    background:
+        rgba(18,18,18,.78);
+
+    color:#999;
+
+    text-decoration:none;
+
+    font-family:inherit;
+
+    font-size:10px;
+    font-weight:600;
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.35);
+
+    transition:
+        .3s ease;
+}
+
+.adminAccess a:hover{
+    color:#fff;
+
+    border-color:
+        rgba(255,255,255,.28);
+
+    background:
+        rgba(40,40,40,.9);
+
+    transform:
+        translateY(-2px);
+}
+
+.adminIcon{
+    font-size:13px;
+}
+
+
+/* =========================
    SWITCH
 ========================= */
 
@@ -1116,6 +1184,16 @@ body::after{
     .panel{
         width:86vw;
         padding:23px 16px;
+    }
+
+    .adminAccess{
+        left:12px;
+        bottom:12px;
+    }
+
+    .adminAccess a{
+        padding:0 12px;
+        font-size:9px;
     }
 }
 
@@ -1452,8 +1530,6 @@ body::after{
                     autocomplete="new-password"
                     required>
 
-                <a href="admin-login.html">لوحة الإدارة</a>
-
             </div>
 
             <button
@@ -1483,6 +1559,25 @@ body::after{
     </div>
 
 </section>
+
+
+<!-- =========================
+     ADMIN ACCESS
+========================= -->
+
+<div class="adminAccess">
+
+    <a href="admin-login.html">
+
+        <span class="adminIcon">
+            ⚙️
+        </span>
+
+        لوحة الإدارة
+
+    </a>
+
+</div>
 
 
 <div
@@ -1862,12 +1957,6 @@ loginForm.addEventListener(
         button.textContent = "جاري الدخول...";
 
 
-        /*
-         * تسجيل الدخول التجريبي
-         * يتم حفظ اسم المستخدم ثم الانتقال
-         * إلى home.html
-         */
-
         const oldUser =
             localStorage.getItem(
                 "alkhwarizmi_user"
@@ -1916,10 +2005,6 @@ loginForm.addEventListener(
                 username +
                 " ✨"
             );
-
-            /*
-             * التحويل إلى الصفحة الرئيسية
-             */
 
             setTimeout(() => {
 
@@ -2033,11 +2118,6 @@ registerForm.addEventListener(
             "جاري إنشاء الحساب...";
 
 
-        /*
-         * حفظ بيانات المستخدم مؤقتاً
-         * باستخدام localStorage
-         */
-
         const userData = {
 
             name: name,
@@ -2070,10 +2150,6 @@ registerForm.addEventListener(
                 "🎉 تم إنشاء حسابك بنجاح"
             );
 
-
-            /*
-             * الانتقال إلى home.html
-             */
 
             setTimeout(() => {
 
